@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>
+			Stopwatch
+		</title>
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+
+	<body>
+
+		<div class="container-fluid">
+			<div id="header">
+				STOPWATCH
+			</div>
+
+			<div id="laptime">
+				<span id="lapmin">00</span>:<span id="lapsec">00</span>:<span id="lapcsec">00</span>
+			</div>
+
+			<div id="time">
+				<span id="timemin">00</span>:<span id="timesec">00</span>:<span id="timecsec">00</span>
+			</div>
+
+			<div id="controlbutton" class="row">
+				<div class="col-1 offset-5">
+					<div id="startbutton" class="controls">
+						Start
+					</div>
+					<div id="stopbutton" class="controls">
+						Stop
+					</div>
+					<div id="resumebutton" class="controls">
+						Resume
+					</div>
+				</div>
+				<div class=" col-1">
+					<div id="lapbutton" class="controls">
+						Lap
+					</div>
+					<div id="resetbutton" class="controls">
+						Reset
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="js/stopwatch.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</html>
