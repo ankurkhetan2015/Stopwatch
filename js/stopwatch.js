@@ -34,6 +34,7 @@ $(function()
 		hideshowButtons("#resumebutton", "#resetbutton");
 
 		//stop counter
+		clearInterval(increment);
 	});
 
 	//click resume button
@@ -43,6 +44,7 @@ $(function()
 		hideshowButtons("#stopbutton", "#lapbutton");
 
 		//start counter again
+		startWatch();
 	});
 
 	//click on reset button
@@ -70,7 +72,15 @@ $(function()
 		increment = setInterval(function()
 			{
 				timeCounter++;
+				if(timeCounter == 100 * 60 * 100)
+				{
+					timeCounter = 0;
+				}
 				lapCounter++;
+				if(lapCounter == 100 * 60 * 100)
+				{
+					lapCounter = 0;
+				}
 				updateTime();
 			}, 10);
 	}
@@ -78,7 +88,7 @@ $(function()
 	//convert the counter to mm:ss:cscs
 	function updateTime()
 	{
-		//min = 60*100 csec, sec = 100 csec
+		//min = 60*100 csec, sec = 100 csec, csec = Counter
 		timeMin = Math.floor(timeCounter / 6000);
 		timeSec = Math.floor((timeCounter % 6000) / 100);
 		timeCsec = (timeCounter % 6000) % 100;
