@@ -10,7 +10,7 @@ body
 #header
 {
 	text-align: center;
-	font-size: 6vw;
+	font-size: 7vw;
 	font-weight: bold;
 }
 
@@ -18,14 +18,14 @@ body
 #laptime
 {
 	text-align: right;
-	font-size: 4vw;
+	font-size: 5vw;
 }
 
 /*actual time measured*/
 #time
 {
 	text-align: center;
-	font-size: 8vw;
+	font-size: 10vw;
 }
 
 /*all different buttons*/
@@ -34,16 +34,25 @@ body
 	margin-bottom: 100px;
 }
 
+/*.col-xs-2
+{
+	margin: 0 5px;
+}*/
+
+.firstbutton
+{
+	margin-right: 14vw;
+}
 .controls
 {
 	color: white;
 	background-color: #d7A04e;
-	width: 6vw;
-	height: 6vw;
+	width: 10vw;
+	height: 10vw;
 	border-radius: 100%;
 	text-align: center;
 	padding: 30% 0;
-	font-size: 1.5vw;
+	font-size: 2.5vw;
 	cursor: pointer;
 	display: none;
 }
@@ -78,7 +87,7 @@ body
 .lapIndividual
 {
 	font-size: 2em;
-	left: 40%;
+	left: 30%;
 	position: absolute;
 }
 
@@ -86,4 +95,60 @@ body
 {
 	font-size: 2em;
 	float: right;
+}
+
+@media only screen and (max-width: 576px)
+{
+	#header
+	{
+		margin-top: 50px;
+		font-size: 40px;
+	}
+	#laptime
+	{
+		margin-top: 50px;
+		font-size: 30px;
+	}
+	
+	#time
+	{
+		margin-top: 50px;
+		font-size: 60px;
+	}
+
+	.controls
+	{
+		width: 60px;
+		height: 60px;
+		padding: 30% 0;
+		font-size: 15px;
+	}
+
+	.firstbutton
+	{
+		margin-right: 10vw;
+	}
+	
+	.lapTitle
+	{
+		font-size: 5vw;
+	}
+
+	.lapIndividual
+	{
+		font-size: 6vw;
+	}
+
+	.lapAggregate
+	{
+		font-size: 6vw;
+	}
+}
+
+@media only screen and (max-width: 400px)
+{
+	.firstbutton
+	{
+		margin-left: 28vw; 
+	}
 }
